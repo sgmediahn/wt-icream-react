@@ -17,8 +17,7 @@ export function ServiceItemCard({ service }) {
           {service.name || service.text || service.title}
         </h5>
         <p>
-          Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor
-          kasd lorem duo stet kasd justo
+          {service.description}
         </p>
         <a
           href=""
