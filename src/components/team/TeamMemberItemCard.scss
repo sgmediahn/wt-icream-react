@@ -1,0 +1,56 @@
+@import "../../styles/var.scss";
+
+.team-item .team-img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 15px solid $primary;
+  border-radius: 200px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.team-item .team-img::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border: 2px solid $primary;
+  border-radius: 200px;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.team-item:hover .team-img::after {
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+}
+
+.team-item .team-img img {
+  transition: 0.5s;
+}
+
+.team-item:hover .team-img img {
+  transform: scale(1.2);
+}
+
+.team .team-social {
+  position: absolute;
+  width: 75px;
+  top: 0;
+  bottom: 0;
+  left: -75px;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.team:hover .team-social {
+  left: 0;
+}

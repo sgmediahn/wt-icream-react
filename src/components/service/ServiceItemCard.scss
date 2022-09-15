@@ -1,0 +1,32 @@
+@import "../../styles/var.scss";
+
+.service-item .service-img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 150px;
+  z-index: 1;
+}
+
+.service-item .service-img::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 0;
+  bottom: -15px;
+  left: 0;
+  background: $primary;
+  border-radius: 150px;
+  z-index: -1;
+}
+
+.service-item .service-img img {
+  transition: 1s;
+}
+
+.service-item:hover .service-img img {
+  transform: rotate(360deg);
+}
